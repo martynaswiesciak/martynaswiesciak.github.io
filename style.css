@@ -1,0 +1,178 @@
+:root {
+	--main-bg-color: #808080;
+	--hover-bg-color: #696969;
+}
+
+@font-face {
+	font-family: caviarDreams;
+	src: url('caviar_dreams/CaviarDreams.ttf');
+}
+
+body {
+	background-image: url('photo/bg.jpg');
+	background-repeat: repeat;
+	background-size: cover;
+	height: 100vh;
+	font-family: caviarDreams;
+	font-size: 100%;
+}
+
+.container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 0.5fr 4fr repeat(4, 2fr) 0.5fr;
+	grid-template-rows: 0.5fr 1fr 4fr 2fr 1fr 0.5fr;
+	grid-gap: 0.4em;
+}
+
+.container div {
+	display: flex;
+	background-color: var(--main-bg-color);
+	border-radius: 0.6em;
+	flex-direction: column;
+	justify-content: center;
+	align-content: flex-start;
+}
+
+.container div span {
+	font-size: 150%;
+}
+
+i {
+	font-size: 300%;
+}
+
+.top {
+	grid-area: 1/1/1/-1;
+	padding-left: 2%;
+	min-height: 2em;
+}
+
+#zegar {
+	grid-area: 1/4/2/-1;
+	padding-right: 5%;
+	padding-left: 50%;
+	z-index: 1;
+}
+
+.top .icon-home {
+	font-size: 100%;
+}
+
+.myphoto {
+	grid-area: 3/2/5/3;
+	width: 100%;
+	min-width: 18em;
+	height: 100%;
+	min-height: 30em;
+	background-image: url('photo/myphoto.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.aboutme {
+	grid-area: 3/3/4/7;
+	padding: 5%;
+	min-height: 16em;
+}
+
+.aboutme i {
+	font-size: 100%;
+}
+
+.studies {
+	grid-area: 4/3/5/4;
+}
+
+.skills {
+	grid-area: 4/4/5/5;
+}
+
+.hobby {
+	grid-area: 4/5/5/6;
+}
+
+.contact {
+	grid-area: 4/6/5/7;
+}
+
+.footer {
+	grid-area: 6/1/7/-1;
+	align-items: center; 
+	text-align: center;
+	min-height: 2em;
+}
+
+.studies, .skills, .hobby, .contact {
+	text-align: center;
+	min-width: 8em;
+	min-height: 11em;
+}
+
+.top:hover {
+	transform: scaleY(1.05);
+}
+
+.studies:hover, .skills:hover, .hobby:hover, .contact:hover {
+	background-color: var(--hover-bg-color);
+	transform: scale(1.02);
+}
+
+
+a:link, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+
+
+@media (max-width:500px) {
+	.container {
+		grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+		grid-template-rows: 0.5fr 1fr 4fr 4fr 2fr 2fr 1fr 0.5fr;
+		grid-gap: 0.3em;
+	}
+
+	.top {
+		grid-area: 1/1/2/-1;
+		min-height: 3em;
+	}
+
+	#zegar {
+		grid-area: 1/3/2/-1;
+		z-index: 2;
+		text-align: end;
+	}
+
+	.myphoto {
+		grid-area: 3/2/4/4;
+		min-width: 15em;
+		min-height: 25em;
+	}
+
+	.aboutme{
+		grid-area: 4/2/5/4;
+		min-height: 25em;
+	}
+
+	.studies {
+		grid-area: 5/2/6/3;
+	}
+
+	.skills {
+		grid-area: 5/3/6/4;
+	}
+
+	.hobby {
+		grid-area: 6/2/7/3;
+	}
+
+	.contact{
+		grid-area: 6/3/7/4;
+	}
+
+	.footer {
+		grid-area: 8/1/-1/-1;
+		min-height: 3em;
+	}
+}
