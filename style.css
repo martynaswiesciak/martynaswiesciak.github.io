@@ -148,12 +148,6 @@ a:link, a:visited {
 		grid-area: 3/2/4/4;
 		min-width: 15em;
 		min-height: 25em;
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
-	
-	div .myphoto {
-		background-color: rgba(0,0,0,0);
 	}
 
 	.aboutme{
