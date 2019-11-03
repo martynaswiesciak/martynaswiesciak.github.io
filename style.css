@@ -126,7 +126,7 @@ a:link, a:visited {
 
 
 
-@media (max-width:500px) {
+@media (max-width:1000px) {
 	.container {
 		grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
 		grid-template-rows: 0.5fr 1fr 4fr 4fr 2fr 2fr 1fr 0.5fr;
@@ -148,6 +148,12 @@ a:link, a:visited {
 		grid-area: 3/2/4/4;
 		min-width: 15em;
 		min-height: 25em;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	
+	div .myphoto {
+		background-color: rgba(0,0,0,0);
 	}
 
 	.aboutme{
